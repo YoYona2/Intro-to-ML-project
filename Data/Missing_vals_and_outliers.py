@@ -25,6 +25,13 @@ from sklearn.preprocessing import StandardScaler
 numerical_features = weather_data.drop(columns=["DATE", "MONTH"])
 
 # Standardizing the features (zero mean, unit variance)
+scaler = StandardScaler()
+normalized_data = scaler.fit_transform(numerical_features)
+
+# Convert back to DataFrame
+normalized_df = pd.DataFrame(normalized_data, columns=numerical_features.columns)
+
+# Display summary statistics after normalization
 normalized_df.describe()
 
 from sklearn.model_selection import train_test_split
