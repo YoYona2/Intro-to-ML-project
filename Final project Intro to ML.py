@@ -16,7 +16,7 @@ def workflow() -> None:
     # See missing values.
     missing_vals(weather_data)
 
-    #
+    
 
 
 # visualize the missing values
@@ -33,3 +33,6 @@ def histograms(data:np.array=None) -> None:
 
 if __name__ == "__main__":
     workflow()
+
+
+# None missing values and I doubt any preprocessing ned to be done, basic data set -- less points?
